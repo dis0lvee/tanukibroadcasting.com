@@ -395,9 +395,18 @@
     return null;
   }
 
+  /* AzuraCast's default (no start/end) schedule reply only covers a short
+     "upcoming" cache window that can fall short of a full week. Passing an
+     explicit start/end makes it expand every recurring schedule item across
+     that range instead, so the guide sees into next calendar week too. */
+  function isoDate(d) { return d.getFullYear() + "-" + two(d.getMonth() + 1) + "-" + two(d.getDate()); }
+
   function loadSchedule() {
     if (!$("week-body") && !$("up-list")) return Promise.resolve();
-    return getJSON(api("/api/station/" + encodeURIComponent(SC) + "/schedule?rows=50"))
+    var d0 = new Date(); d0.setHours(0, 0, 0, 0);
+    var d6 = new Date(d0.getTime() + 6 * 86400000);
+    var qs = "?start=" + isoDate(d0) + "&end=" + isoDate(d6);
+    return getJSON(api("/api/station/" + encodeURIComponent(SC) + "/schedule" + qs))
       .then(function (rows) { sched = rows || []; renderWeek(); renderUpNext(); if (np) render(); })
       .catch(function (e) { sched = []; renderWeek("Could not read the schedule (" + e.message + ")."); renderUpNext(); });
   }
