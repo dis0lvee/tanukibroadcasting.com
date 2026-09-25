@@ -233,10 +233,8 @@ a.b88:link,a.b88:visited{text-decoration:none}
 .b88 big{display:block;font-size:10px;line-height:12px;letter-spacing:1px}
 .b88.a{background:#000;color:#00FF00}
 .b88.b{background:#3B2412;color:#FFCC00}
-.b88.c{background:#2E5E2E;color:#FFFFCC}
-.b88.d{background:#FFFFFF;color:#000080}
+.b88.c{background:#5DADE2;color:#FFFFFF;border-color:#FFCC00}
 .b88.e{background:#FFCC00;color:#000}
-.web-ring{line-height:1.8}
 
 /* ---------- the pop-up player ---------- */
 body.popup{background:#3A3A44;background-image:none}

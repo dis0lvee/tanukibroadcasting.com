@@ -23,7 +23,7 @@
     <td class="logo"><img src="tanuki.png" width="96" height="88" alt="The Tanuki Broadcasting tanuki, with a leaf on its head"></td>
     <td>
       <div class="name">Commonwealth Radio</div>
-      <div class="tag">a <b>TANUKI BROADCASTING</b> station &nbsp;&#183;&nbsp; <b>MIDORIHEIKI</b> &nbsp;&#183;&nbsp; the&nbsp;Commonwealth,&nbsp;CivMC</div>
+      <div class="tag"><b>TANUKI BROADCASTING</b> &nbsp;&#183;&nbsp; <b>MIDORIHEIKI</b> &nbsp;&#183;&nbsp; the&nbsp;Commonwealth,&nbsp;CivMC</div>
     </td>
     <td class="sign">
       <div class="studio">STUDIO<span class="big" id="sign">- - -</span><span id="sign-sub">tuning in</span></div>
@@ -86,15 +86,11 @@
   <section class="panel" id="p-listen">
     <h2 class="sec">On Commonwealth Radio</h2>
     <p>Music around the clock out of Midoriheiki. The Auto DJ runs the rotation. When a DJ connects, the studio sign turns red and the show is theirs until they sign off. Anyone can put a song in the queue from the <a href="#requests">request line</a>.</p>
-    <div class="callout warn">
-      <span class="lbl">LISTENING WHILE YOU PLAY CIVMC</span>
-      <p>Minecraft has no radio block, so the station plays alongside the game. Turn Minecraft's <em>Music</em> slider to <span class="mono">OFF</span> under Options &gt; Music &amp; Sounds, or two soundtracks play at once. Leave <em>Hostile Creatures</em> up. You still want to hear a creeper.</p>
-    </div>
     <p>Want the music to follow you around the site, or to keep it going with this tab closed? Press <strong>POP-UP</strong> on the player.</p>
   </section>
 
   <section class="panel" id="p-schedule">
-    <h2 class="sec">Programme guide</h2>
+    <h2 class="sec">Program guide</h2>
     <div class="tw">
       <table class="week">
         <thead><tr id="week-head"></tr></thead>
@@ -124,31 +120,16 @@
 
   <section class="panel" id="p-djs">
     <h2 class="sec">Get on the air</h2>
-    <p>Tanuki Broadcasting gives DJs a streamer account. Ask the station for one. Connect, and the Auto DJ fades out and the studio sign turns red for every listener. Disconnect, and the rotation picks up again by itself.</p>
-    <h3>From BUTT, Mixxx or any Icecast encoder</h3>
-    <div class="tw">
-      <table>
-        <thead><tr><th>Setting</th><th>Value</th></tr></thead>
-        <tbody>
-          <tr><td>Server type</td><td>Icecast</td></tr>
-          <tr><td>Address</td><td class="mono" id="dj-host">&hellip;</td></tr>
-          <tr><td>Port</td><td class="mono">8005</td></tr>
-          <tr><td>Mount point</td><td class="mono">/</td></tr>
-          <tr><td>User / password</td><td>your streamer account, not your AzuraCast login</td></tr>
-        </tbody>
-      </table>
+    <div class="callout warn">
+      <span class="lbl">HOW TO APPLY</span>
+      <p>Application details are being written and will appear here.</p>
     </div>
-    <p>8005 is AzuraCast's DJ port for the first station on a server, five above the listener port 8000. If the station profile in AzuraCast says otherwise under <em>Broadcasting &gt; DJ/Streamer</em>, it is right and this page is wrong.</p>
-    <h3>From a browser</h3>
-    <p>AzuraCast's Web DJ page is at <span class="mono">/public/<span class="shortcode">commonwealth_radio</span>/dj</span>. It only works over HTTPS. Browsers will not hand a microphone to a plain-HTTP page, and the page gives no error when that happens.</p>
   </section>
 
   <section class="panel" id="p-about">
     <h2 class="sec">About the station</h2>
-    <p><strong>Tanuki Broadcasting</strong> is a private corporation in <strong>Midoriheiki</strong>, the settlement formerly called the Standing Stones. The Commonwealth's CivWiki article still lists it as <em>Standing Stones Reserve</em>. It is the same place. The station is the company's, not a government service.</p>
-    <p><strong>The Commonwealth</strong> is a monarchy on CivMC, founded 6 June 2022, with its capital at Mount Olympus near <span class="mono">-4000, 0</span>. It governs through a House of Elders, a House of Lords and a Prime Minister. Its motto is <em>To Live Without Fear &ndash; Vivre Sans Peur</em>, and it speaks English, French and Tagalog. The rest of the nation's story, and who holds office now, is on <a href="https://civwiki.org/wiki/The_Commonwealth_(CivMC)">its CivWiki article</a>.</p>
-    <h3>The set</h3>
-    <p>Everything on the player comes out of the station's own <a href="https://www.azuracast.com/">AzuraCast</a> every <span id="poll-s">15</span> seconds. The spectrum is drawn from the audio you are actually hearing, not faked. It is 76&times;16 pixels, the same as Winamp's, doubled. It stays dark when the stream will not let the page read it.</p>
+    <p><strong>Tanuki Broadcasting</strong> is a private broadcasting corporation founded in <strong>Midoriheiki</strong>. The station is the company's, and not a government service. All opinions expressed by employees do not reflect that of the Commonwealth government in any way, shape or form.</p>
+    <p><strong>The Commonwealth</strong> is a monarchy on CivMC, founded 6 June 2022, with its capital at Mount Olympus near <span class="mono">-4000, 0</span>. It governs through a House of Commons, and a Prime Minister, while having a House of Lords that act as semi-independent regional governors. Its motto is <em>To Live Without Fear &ndash; Vivre Sans Peur</em>. The Commonwealth has historically acted as a haven for newfriends, and grown scions into beautiful trees. The rest of the nation's story is on <a href="https://civwiki.org/wiki/The_Commonwealth_(CivMC)">its CivWiki article</a>.</p>
   </section>
 
 </main>
@@ -197,14 +178,11 @@
 
 <footer>
   <div class="badges">
-    <a class="b88 a" id="b-listen" href="#"><big>LISTEN</big><span id="b-kbps">128k</span> MP3</a><span class="b88 b"><big>TANUKI</big>BROADCASTING</span><a class="b88 c" href="https://civwiki.org/wiki/The_Commonwealth_(CivMC)"><big>CivMC</big>COMMONWEALTH</a><a class="b88 d" href="https://www.azuracast.com/">powered by<big>AzuraCast</big></a><span class="b88 e"><big>BEST HEARD</big>LOUD</span>
-  </div>
-  <div class="web-ring">
-    &#171;&nbsp; <a href="#top">prev station</a> &#9670; <a href="#top">CivMC Radio Webring</a> &#9670; <a href="#top">next station</a> &nbsp;&#187;
+    <a class="b88 a" id="b-listen" href="#"><big>LISTEN</big><span id="b-kbps">128k</span> MP3</a><span class="b88 b"><big>TANUKI</big>BROADCASTING</span><a class="b88 c" href="https://civwiki.org/wiki/The_Commonwealth_(CivMC)"><big>CivMC</big>COMMONWEALTH</a><span class="b88 e"><big>BEST HEARD</big>LOUD</span>
   </div>
   <p style="margin-top:8px">
     &copy; 2026 Tanuki Broadcasting, Midoriheiki &nbsp;&#183;&nbsp; not affiliated with Mojang AB or the Crown<br>
-    best viewed at 1024&times;768 &nbsp;&#183;&nbsp; <a href="#requests"><span class="blink">Call in a request!</span></a>
+    <a href="#requests"><span class="blink">Call in a request!</span></a>
   </p>
 </footer>
 
