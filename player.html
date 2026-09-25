@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commonwealth Radio - player</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="radio.css">
+</head>
+<body class="popup">
+
+<div class="amp" id="amp">
+  <div class="bar-title">COMMONWEALTH RADIO &nbsp;&#183;&nbsp; POP-UP <span class="x" id="amp-sync">--:--:--</span></div>
+  <table class="face" role="presentation"><tr>
+    <td class="art"><img id="np-art" alt="" width="122" height="122"></td>
+    <td>
+      <div class="lcd">
+        <table role="presentation"><tr>
+          <td class="clock"><span id="np-clock">--:--</span><canvas id="vis" width="76" height="16" aria-hidden="true"></canvas></td>
+          <td>
+            <div class="scroll" aria-hidden="true"><marquee id="np-scroll" scrollamount="3">*** COMMONWEALTH RADIO ***</marquee></div>
+            <div class="info"><b id="lcd-kbps">---</b> KBPS &nbsp;<b id="lcd-fmt">---</b> &nbsp;<b id="lcd-lis">-</b> LISTENING</div>
+            <div class="src" id="np-src">&nbsp;</div>
+            <div class="src" id="np-next">&nbsp;</div>
+            <div class="info"><span class="flag red" id="f-live">LIVE</span><span class="flag" id="f-auto">AUTO</span><span class="flag" id="f-req">REQ</span><span class="flag red" id="f-off">NO SIGNAL</span></div>
+          </td>
+        </tr></table>
+      </div>
+    </td>
+  </tr></table>
+  <div class="pos"><i id="np-pos"></i></div>
+  <div class="transport">
+    <button class="b go" id="btn-listen" type="button">&#9658; LISTEN</button><button class="b" id="btn-stop" type="button" disabled>&#9632; STOP</button>
+    <label>VOL <input type="range" id="vol" min="0" max="100" value="80" aria-label="Volume"></label>
+    <span class="state" id="player-state"></span>
+  </div>
+</div>
+<div class="sr" aria-live="polite" id="np-live"></div>
+
+<script src="config.js"></script>
+<script src="radio.js"></script>
+</body>
+</html>

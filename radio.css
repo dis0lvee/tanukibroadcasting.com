@@ -1,0 +1,243 @@
+/* ============================================================
+   COMMONWEALTH RADIO -- radio.css v2.0
+   Tanuki Broadcasting, Midoriheiki. hand-coded, not generated.
+   best viewed at 1024x768. best heard at 128 kbps.
+   NO gradients. NO rounded corners. NO dark mode.
+   House rules from the Beta Mod wiki (WIKI_RUBRIC.md); the layout
+   is a station's, not a wiki's: the player is the page.
+   ============================================================ */
+
+body{
+  margin:0; padding:0;
+  background:#D6CCA8;
+  background-image:url("data:image/gif;base64,R0lGODdhCAAIAIEAANbMqMm9lLiqfAAAACwAAAAACAAIAAAIGQABCBw4MIAAgQEGHiTIsKHDhAgXEpToMCAAOw==");
+  color:#000000;
+  font-family:"Times New Roman",Times,serif;
+  font-size:16px;
+}
+*{box-sizing:border-box}
+p{margin:0 0 12px}
+a:link{color:#0000EE;text-decoration:underline}
+a:visited{color:#551A8B}
+a:active{color:#FF0000}
+hr{border:none;border-top:2px ridge #999;border-bottom:1px solid #fff;margin:14px 0}
+.mono,code,td.id,.kbd{font-family:"Courier New",Courier,monospace}
+code{background:#FFFFCC;border:1px solid #CCCC99;padding:0 3px;font-size:.9em;word-break:break-all}
+.blink{animation:blinker 1s step-start infinite;font-weight:bold}
+@keyframes blinker{50%{opacity:0}}
+.sr{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+/* ---------- the page frame ---------- */
+.wrap{max-width:1000px;margin:0 auto;padding:10px 16px 40px}
+.paper{background:#FFFFFF;border:2px solid #000;padding:0 0 24px}
+.inner{padding:0 18px}
+@media screen and (max-width:600px){ .inner{padding:0 10px} }
+
+/* ---------- the banner ---------- */
+.banner{background:#3B2412;border-bottom:4px double #FFCC00;color:#FFE8B0}
+.banner table{width:100%;border-collapse:collapse;border:none;background:transparent}
+.banner td{border:none;padding:10px 14px;vertical-align:middle;background:transparent}
+.banner td.logo{width:1%;padding-right:0}
+.banner td.logo img{display:block;width:96px;height:88px;image-rendering:pixelated;image-rendering:crisp-edges}
+.banner .name{
+  font-family:Georgia,"Times New Roman",serif;font-weight:bold;font-size:40px;line-height:1;
+  color:#FFCC00;letter-spacing:-1px;text-shadow:3px 3px 0 #000000;
+}
+.banner .tag{font-family:Verdana,Arial,sans-serif;font-size:11px;letter-spacing:1px;color:#E6D2A6;margin-top:6px}
+.banner .tag b{color:#FFFFFF}
+.banner td.sign{width:1%;text-align:center;white-space:nowrap}
+.studio{
+  display:inline-block;background:#1A0F07;border:3px inset #6B3E1F;padding:6px 8px;
+  font-family:Verdana,Arial,sans-serif;font-size:9px;letter-spacing:1px;color:#A89C7C;
+}
+.studio .big{
+  display:block;margin:4px 0 2px;padding:3px 10px;font-size:16px;font-weight:bold;letter-spacing:2px;
+  border:2px inset #444;background:#2A2018;color:#5A4A38;
+}
+.studio .big.live{background:#FF0000;color:#FFFFFF;border:2px outset #FF6666}
+.studio .big.auto{background:#FFCC00;color:#000000;border:2px outset #FFE066}
+.studio .big.off{background:#000000;color:#FF0000;border:2px outset #444}
+@media screen and (max-width:700px){
+  .banner td{display:block;width:auto !important;text-align:center;padding:8px}
+  .banner td.logo img{margin:0 auto;width:72px;height:66px}
+  .banner .name{font-size:30px}
+}
+
+/* ---------- the station buttons ---------- */
+nav.buttons{background:#6B3E1F;border-bottom:2px solid #000;padding:5px 8px 1px;text-align:center}
+nav.buttons a{
+  display:inline-block;margin:0 2px 4px;padding:3px 12px;min-width:92px;
+  font-family:Verdana,Arial,sans-serif;font-size:11px;font-weight:bold;letter-spacing:1px;
+  background:#C6B48C;color:#000;text-decoration:none;border:2px outset #E6D8B4;
+}
+nav.buttons a:hover{background:#FFCC00}
+nav.buttons a.on{background:#2E5E2E;color:#FFFFCC;border-style:inset;border-color:#4F7F4F}
+
+/* ---------- two columns: the set, and the rail ---------- */
+.cols{display:block;width:100%;margin-top:16px}
+@media screen and (min-width:861px){
+  .cols{display:table;table-layout:fixed}
+  .cols>main{display:table-cell;vertical-align:top;padding-right:16px}
+  .cols>aside{display:table-cell;vertical-align:top;width:260px}
+}
+main{min-width:0;display:block}
+
+/* ---------- the player window ---------- */
+.amp{background:#3A3A44;border:3px outset #6A6A78;padding:0 6px 6px;margin:0 0 12px;color:#C8C8D0}
+.bar-title{
+  background:#1C1C24;color:#FFCC00;margin:0 -6px 6px;padding:2px 8px;
+  font-family:Verdana,Arial,sans-serif;font-size:10px;font-weight:bold;letter-spacing:2px;
+  border-bottom:1px solid #000;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.bar-title .x{float:right;color:#8A8A98;letter-spacing:0}
+.amp table.face{width:100%;border-collapse:collapse;border:none;background:transparent}
+.amp table.face td{border:none;padding:0;vertical-align:top;background:transparent}
+.amp td.art{width:128px;padding-right:6px}
+.amp td.art img{display:block;width:122px;height:122px;border:2px inset #6A6A78;background:#000;object-fit:cover}
+.lcd{background:#000000;border:2px inset #6A6A78;padding:6px 8px;height:122px;color:#00E000;font-family:"Courier New",monospace;overflow:hidden}
+.lcd table{width:100%;border-collapse:collapse;border:none;background:transparent}
+.lcd td{border:none;padding:0;background:transparent;vertical-align:top}
+.lcd .clock{font-size:30px;font-weight:bold;line-height:1;letter-spacing:1px;color:#00E000;width:1%;white-space:nowrap;padding-right:10px}
+.lcd canvas{display:block;width:152px;height:32px;image-rendering:pixelated;image-rendering:crisp-edges;margin-top:6px}
+.lcd .scroll{font-size:14px;font-weight:bold;color:#00FF00;white-space:nowrap;overflow:hidden}
+.lcd .info{font-size:10.5px;color:#00B000;margin-top:3px;letter-spacing:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lcd .info b{color:#00FF00;font-weight:normal}
+.lcd .src{font-size:10.5px;color:#00B000;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lcd .flag{display:inline-block;padding:0 3px;margin-right:4px;border:1px solid #005000;color:#004800}
+.lcd .flag.lit{color:#00FF00;border-color:#00A000}
+.lcd .flag.red.lit{color:#FF3030;border-color:#A00000}
+/* the position bar: a seek slider you can't drag, because it's radio */
+.pos{height:10px;margin:7px 0 0;background:#1A1A20;border:2px inset #6A6A78;position:relative}
+.pos i{position:absolute;left:0;top:0;bottom:0;background:#8A8A98;border-right:3px solid #FFCC00;width:0}
+@media screen and (max-width:600px){
+  .amp table.face, .amp table.face tbody, .amp table.face tr, .amp table.face td{display:block;width:auto}
+  .amp td.art{padding:0 0 6px}
+  .amp td.art img{margin:0 auto}
+  .lcd{height:auto}
+}
+
+.transport{margin-top:6px;font-family:Verdana,Arial,sans-serif;font-size:10px;color:#C8C8D0}
+.transport label{margin-left:6px;white-space:nowrap;letter-spacing:1px}
+.transport input[type=range]{vertical-align:middle;width:100px}
+.transport .state{font-family:"Courier New",monospace;font-size:11px;color:#FFCC00;margin-left:6px}
+button.b{
+  font-family:Verdana,Arial,sans-serif;font-size:11px;font-weight:bold;letter-spacing:1px;cursor:pointer;
+  background:#C8C8D0;color:#000;border:2px outset #EEEEF4;padding:3px 10px;margin:0 3px 3px 0;
+}
+button.b:active{border-style:inset}
+button.b[disabled]{color:#808088;cursor:default}
+button.b.go{background:#2E5E2E;color:#FFFFCC;border-color:#4F7F4F}
+button.b.pop{float:right;margin-right:0}
+
+/* ---------- the playlist window ---------- */
+.pl{background:#3A3A44;border:3px outset #6A6A78;padding:0 6px 6px;margin:0 0 16px}
+.pl ol{
+  list-style:none;margin:0;padding:4px 6px;background:#000;border:2px inset #6A6A78;
+  font-family:"Courier New",monospace;font-size:12.5px;color:#00C000;
+}
+.pl li{margin:0;padding:1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pl li .t{float:right;padding-left:10px;color:#008800}
+.pl li.cur{color:#FFFFFF;background:#0000A0}
+.pl li.cur .t{color:#FFFFFF}
+.pl li.next{color:#707070}
+.pl li .req{color:#FFCC00}
+.pl .foot{font-family:Verdana,Arial,sans-serif;font-size:9.5px;letter-spacing:1px;color:#A8A8B4;margin-top:4px}
+
+/* ---------- the panels ---------- */
+.panel{margin-bottom:10px}
+html.js .panel{display:none}
+html.js .panel.on{display:block}
+h2.sec{
+  margin:0 0 10px;font-size:18px;color:#FFFFFF;background:#2E5E2E;
+  padding:3px 10px;border:2px outset #4F7F4F;font-family:Verdana,Arial,sans-serif;font-weight:bold;
+}
+h3{
+  margin:18px 0 6px;font-size:16px;color:#6B3E1F;border-bottom:1px dashed #6B3E1F;padding-bottom:2px;
+  font-family:Georgia,"Times New Roman",serif;
+}
+
+/* ---------- the rail ---------- */
+.box{border:2px groove #808080;background:#FFFFCC;margin:0 0 12px;font-family:Verdana,Arial,sans-serif;font-size:11px}
+.box h4{
+  margin:0;padding:2px 6px;background:#6B3E1F;color:#FFCC00;font-size:10px;letter-spacing:2px;
+  border-bottom:1px solid #000;
+}
+.box .bd{padding:6px 8px}
+.box .bd p{margin:0 0 6px}
+.box .show{font-family:Georgia,"Times New Roman",serif;font-size:16px;font-weight:bold;color:#2E5E2E}
+.box ul{list-style:none;margin:0;padding:0}
+.box li{margin:0 0 4px}
+.box li .when{font-family:"Courier New",monospace;color:#6B3E1F;margin-right:4px}
+.box a.tune{
+  display:block;margin:0 0 4px;padding:3px 6px;background:#DFDFDF;border:2px outset #FFFFFF;
+  color:#000;text-decoration:none;font-weight:bold;
+}
+.box a.tune:hover{background:#FFCC00}
+.box a.tune span{float:right;font-weight:normal;color:#555;font-size:10px}
+.digits{
+  display:inline-block;background:#000;color:#33FF33;
+  font-family:"Courier New",monospace;font-weight:bold;font-size:17px;letter-spacing:4px;
+  border:2px inset #808080;padding:1px 6px;
+}
+
+/* ---------- tables ---------- */
+.tw{overflow-x:auto;margin:0 0 14px}
+table{border-collapse:collapse;width:100%;font-size:14px;background:#FFFFFF;border:2px groove #808080}
+th,td{padding:4px 8px;border:1px solid #AAAAAA;vertical-align:top;text-align:left}
+th{background:#E6DCBE;color:#000;font-family:Verdana,Arial,sans-serif;font-size:11px;font-weight:bold}
+tbody tr:nth-child(even) td{background:#F7F2E2}
+td.act{width:1%;white-space:nowrap}
+td.empty{color:#666;font-style:italic;text-align:center}
+
+/* the programme guide: seven columns, because a week has seven days */
+table.week{table-layout:fixed;font-family:Verdana,Arial,sans-serif;font-size:11px}
+table.week th{text-align:center;background:#6B3E1F;color:#FFCC00;border-color:#3B2412}
+table.week th.today{background:#2E5E2E;color:#FFFFCC}
+table.week td{height:120px;padding:3px;background:#FFFFFF !important}
+table.week td.today{background:#FFFFE0 !important}
+.slot{border:1px solid #6B3E1F;background:#F3E6C4;padding:2px 3px;margin:0 0 3px;word-break:break-word}
+.slot .when{display:block;font-family:"Courier New",monospace;font-size:10.5px;color:#6B3E1F}
+.slot.live{background:#FFE0E0;border-color:#96362D}
+.slot.now{border:2px solid #FF0000}
+.slot .nowtag{background:#FF0000;color:#FFF;font-weight:bold;padding:0 3px;font-size:9px;letter-spacing:1px}
+td.idle{color:#999;font-style:italic;text-align:center;vertical-align:middle}
+@media screen and (max-width:700px){
+  table.week, table.week thead, table.week tbody, table.week tr, table.week th, table.week td{display:block;width:auto;height:auto}
+  table.week thead{display:none}
+  table.week td:before{content:attr(data-day);display:block;font-weight:bold;color:#6B3E1F;margin-bottom:2px}
+}
+
+.searchrow{margin:0 0 8px;font-family:Verdana,Arial,sans-serif;font-size:11px}
+.searchrow input[type=text]{font-family:"Courier New",monospace;font-size:13px;border:2px inset #DDD;padding:2px 4px;width:220px;max-width:55%}
+.pager{font-family:Verdana,Arial,sans-serif;font-size:11px;margin:4px 0 0}
+.msg{font-family:Verdana,Arial,sans-serif;font-size:11.5px;margin:0 0 8px;min-height:1em}
+.msg.ok{color:#2E5E2E}
+.msg.bad{color:#96362D}
+
+.callout{border:2px solid #2E5E2E;background:#EAF2DF;padding:8px 12px;margin:0 0 14px;font-size:14px}
+.callout p:last-child{margin-bottom:0}
+.callout.warn{border-color:#9C6B18;background:#F7EDD5}
+.callout.crit{border-color:#96362D;background:#F5E0DC}
+.callout .lbl{display:block;font-family:Verdana,Arial,sans-serif;font-size:10px;font-weight:bold;letter-spacing:1px;color:#6B3E1F;margin-bottom:3px}
+.chip{display:inline-block;font-family:Verdana,Arial,sans-serif;font-size:9.5px;font-weight:bold;letter-spacing:1px;padding:0 5px;border:1px solid #000;background:#FFFFCC;color:#000}
+
+/* ---------- footer, with 88x31 buttons ---------- */
+footer{margin:24px 18px 0;border-top:4px double #6B3E1F;padding-top:10px;text-align:center;font-family:Verdana,Arial,sans-serif;font-size:10.5px;color:#555}
+.badges{margin:4px 0 10px;line-height:0}
+.b88{
+  display:inline-block;width:88px;height:31px;margin:2px;vertical-align:top;overflow:hidden;
+  border:2px outset #DDD;font-family:Verdana,Arial,sans-serif;font-size:8px;font-weight:bold;line-height:11px;
+  text-align:center;padding:2px 1px 0;text-decoration:none;letter-spacing:0;white-space:nowrap;
+}
+a.b88:link,a.b88:visited{text-decoration:none}
+.b88 big{display:block;font-size:10px;line-height:12px;letter-spacing:1px}
+.b88.a{background:#000;color:#00FF00}
+.b88.b{background:#3B2412;color:#FFCC00}
+.b88.c{background:#2E5E2E;color:#FFFFCC}
+.b88.d{background:#FFFFFF;color:#000080}
+.b88.e{background:#FFCC00;color:#000}
+.web-ring{line-height:1.8}
+
+/* ---------- the pop-up player ---------- */
+body.popup{background:#3A3A44;background-image:none}
+body.popup .amp{margin:0;border:none}
