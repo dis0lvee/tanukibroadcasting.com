@@ -95,9 +95,9 @@ main{min-width:0;display:block}
 .amp td.art{width:128px;padding-right:6px}
 .amp td.art img{display:block;width:122px;height:122px;border:2px inset #6A6A78;background:#000;object-fit:cover}
 .lcd{background:#000000;border:2px inset #6A6A78;padding:6px 8px;height:122px;color:#00E000;font-family:"Courier New",monospace;overflow:hidden}
-.lcd table{width:100%;border-collapse:collapse;border:none;background:transparent}
+.lcd table{width:100%;table-layout:fixed;border-collapse:collapse;border:none;background:transparent}
 .lcd td{border:none;padding:0;background:transparent;vertical-align:top}
-.lcd .clock{font-size:30px;font-weight:bold;line-height:1;letter-spacing:1px;color:#00E000;width:1%;white-space:nowrap;padding-right:10px}
+.lcd .clock{font-size:30px;font-weight:bold;line-height:1;letter-spacing:1px;color:#00E000;width:168px;white-space:nowrap;padding-right:10px}
 .lcd canvas{display:block;width:152px;height:32px;image-rendering:pixelated;image-rendering:crisp-edges;margin-top:6px}
 .lcd .scroll{font-size:14px;font-weight:bold;color:#00FF00;white-space:nowrap;overflow:hidden}
 .lcd .info{font-size:10.5px;color:#00B000;margin-top:3px;letter-spacing:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
