@@ -139,7 +139,9 @@
     /* during a live show playing_next is still the Auto DJ's queue, which
        will not air until the DJ leaves, so don't advertise it */
     var nx = !live && d.playing_next && d.playing_next.song;
-    text("np-next", live ? "NEXT: THE DJ'S CHOICE" : nx ? "NEXT: " + songLine(nx) : " ");
+    var nextText = live ? "THE DJ'S CHOICE" : nx ? songLine(nx) : "";
+    text("np-next-lbl", nextText ? "NEXT: " : " ");
+    text("np-next", nextText || " ");
 
     var art = $("np-art");
     if (art && song.art && art.getAttribute("src") !== song.art) {
