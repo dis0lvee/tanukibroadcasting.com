@@ -13,7 +13,7 @@
   var POLL = Math.max(5, C.poll || 15);
   var ROWS = C.requestRows || 20;
 
-  var np = null, npAt = 0, lastOk = 0, scrollText = "";
+  var np = null, npAt = 0, lastOk = 0, scrollText = "", nextScrollText = "";
 
   function $(id) { return document.getElementById(id); }
   function api(p) { return BASE + p; }
@@ -105,6 +105,12 @@
     text("np-scroll", s);
   }
 
+  function setNextScroll(s) {
+    if (s === nextScrollText) return;   /* rewriting a marquee restarts its scroll */
+    nextScrollText = s;
+    text("np-next", s);
+  }
+
   function offAir(why) {
     var box = $("offair");
     if (box) box.hidden = false;
@@ -141,7 +147,7 @@
     var nx = !live && d.playing_next && d.playing_next.song;
     var nextText = live ? "THE DJ'S CHOICE" : nx ? songLine(nx) : "";
     text("np-next-lbl", nextText ? "NEXT: " : " ");
-    text("np-next", nextText || " ");
+    setNextScroll(nextText || " ");
 
     var art = $("np-art");
     if (art && song.art && art.getAttribute("src") !== song.art) {
