@@ -103,6 +103,9 @@ main{min-width:0;display:block}
 .lcd .info{font-size:10.5px;color:#00B000;margin-top:3px;letter-spacing:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .lcd .info b{color:#00FF00;font-weight:normal}
 .lcd .src{font-size:10.5px;color:#00B000;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lcd .src.next{display:flex;align-items:center;text-overflow:clip}
+.lcd .src.next b{flex:none;white-space:nowrap;margin-right:4px}
+.lcd .src.next marquee{flex:1;min-width:0}
 .lcd .flag{display:inline-block;padding:0 3px;margin-right:4px;border:1px solid #005000;color:#004800}
 .lcd .flag.lit{color:#00FF00;border-color:#00A000}
 .lcd .flag.red.lit{color:#FF3030;border-color:#A00000}
