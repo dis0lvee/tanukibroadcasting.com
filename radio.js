@@ -167,7 +167,7 @@
       text("tune-fmt", (m.bitrate ? m.bitrate + "k " : "") + (m.format || "mp3").toUpperCase());
       if (m.bitrate) text("b-kbps", m.bitrate + "k");
     }
-    text("amp-sync", new Date(npAt).toLocaleTimeString());
+    text("amp-sync", new Date(npAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }));
 
     renderOnAir(live, dj, cur, d.live);
     renderPlaylist(d);
